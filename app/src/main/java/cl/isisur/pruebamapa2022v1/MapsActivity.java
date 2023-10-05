@@ -49,12 +49,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng Unach00 = new LatLng(-36.638270, -71.997210);
         LatLng Unach01 = new LatLng(-36.637071, -71.995432);
         LatLng Unach02 = new LatLng(-36.635186, -71.996880);
+        LatLng Unach03 = new LatLng(-36.589673,-72.082447);
+
+
+
+
 
 
         mMap.addMarker(new MarkerOptions().position(Unach00).title("Entrada Unach"));
         mMap.addMarker(new MarkerOptions().position(Unach01).title("LC1"));
         mMap.addMarker(new MarkerOptions().position(Unach02).title("Dormitorio de M"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(Unach00));
+        mMap.addMarker(new MarkerOptions().position(Unach03).title("IPVG"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(Unach03));
         mMap.setMinZoomPreference(10.0f);
         mMap.setMaxZoomPreference(50.0f);
 
