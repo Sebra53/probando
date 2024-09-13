@@ -36,25 +36,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LatLng Unach00 = new LatLng(-36.638270, -71.997210);
-        LatLng Unach01 = new LatLng(-36.637071, -71.995432);
-        LatLng Unach02 = new LatLng(-36.635186, -71.996880);
-        LatLng Unach03 = new LatLng(-36.589673,-72.082447);
+        LatLng UDEC = new LatLng(-36.598619, -72.087786);
+        LatLng IPVG = new LatLng(-36.589809, -72.082673);
+        LatLng VIVO = new LatLng(-36.588756, -72.077756);
+        mMap.addMarker(new MarkerOptions().position(UDEC).title("UDEC"));
+        mMap.addMarker(new MarkerOptions().position(VIVO).title("VIVO"));
+        mMap.addMarker(new MarkerOptions().position(IPVG).title("IPVG"));
 
-        mMap.addMarker(new MarkerOptions().position(Unach00).title("Entrada Unach"));
-        mMap.addMarker(new MarkerOptions().position(Unach01).title("LC1"));
-        mMap.addMarker(new MarkerOptions().position(Unach02).title("Dormitorio de M"));
-        mMap.addMarker(new MarkerOptions().position(Unach03).title("IPVG"));
 
-        LatLng london = new LatLng(-36.589673,-72.082447);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(IPVG,100));
 
-// Mover la cámara a la ubicación de Londres
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(london));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(london, 10));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(Unach03));
 
-        mMap.setMinZoomPreference(10.0f);
-        mMap.setMaxZoomPreference(50.0f);
+        //mMap.setMinZoomPreference(10.0f);
+        //mMap.setMaxZoomPreference(50.0f);
 
     }
 }
